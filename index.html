@@ -9,51 +9,106 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <div class="nav-logo border"></div>
-            <div class="logo"></div>
-        </div>
-        <div class="nav-search">
-            <p class="add-first">Deliver to</p>
-        <div class="add-icon">
-            <i class="fa-solid fa-location-dot"></i>
-            <p class="add-second border">India</p>
-              </div>
-           </div>
-        <div class="new search">
-            <select class="select search">
-                <option>All</option>
-            </select>
-            <input placeholder="Search Amazon" class="search input">
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="nav">
+        <div class="logo">
+            <img src="data:image/png;base64,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" alt="amazon image"></div>
+        <div class="box-1"><p>Delivery to Mumbai 4000001</p><p><strong>Update Location</strong></p></div>
+   <div class="search_bar">
+    <select name=" " id=" ">
+    <option value="">All</option>
+     <option value="">Product</option> 
+     <option value="">Product</option> 
+     <option value="">Product</option> 
+     <option value="">Product</option> 
+     <option value="">Product</option>
+     </select>
+     <input type="text" placeholder="Search Amazon.in">
+     <button>Search</button>
+    </div>
+    <div class="box1">
+        <img src="data:image/png;base64,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" alt="indian image">
+        <p><strong>En</strong></p>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="f1">
+        <p>Hello sign in</p>
+        <p><strong>Accounts and List</strong></p>
+    </div>
+    <div class="f2">
+        <p>Returns</p>
+        <p><strong>& Orders</strong></p>
+    </div>
+    <div class="f3">
+        <p> 
+    <strong>Cart</strong>
+        </p>
+    </div>
+    </div>
+      <div class="sub-nav">
+            <p><strong>☰ All</strong></p>
+            <p>Fresh</p>
+            <p>MX Player</p>
+            <p>Sell</p>
+            <p>Bestsellers</p>
+            <p>Today's Deals</p>
+             <p>Mobiles</p>
+              <p>Customer Service</p>
+               <p>New Releases</p> 
+            <p>Prime</p>
+            <p>Fashion</p>
+            <p>Amazon Pay</p>
+
+    </div>
+    <div class="hero-section">
+        <img src="" alt="Hero banner">
+    </div>
+    <main class="main-container">
+        <div class="card">
+            <h2>revamp your home in style</h2>
+            <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
+            </div>
+                <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
+            </div>
+                <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
+            </div>
+                <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
             </div>
         </div>
-        <div class="nav-return border">
-            <p><span>Returns</span></p>
-            <p class="nav-second">& Orders</p>
+        
+        <div class="card">
+            <h2>revamp your home in style</h2>
+            <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
+            </div>
+                <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
+            </div>
+                <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
+            </div>
+                <div class="grid-item">
+                <img src="" alt="Home">
+                <p>Cushion covers</p>
+            </div>
         </div>
-        <div class="nav-cert border">
-            <i class="fa solid fa chart-shopping"></i>
-            Cart
-        </div>
-    </div>
-    <div class="panel">
-        <div class="panel-all">
-            <i class="fa-solid fa-bars"></i>
-            All
-        </div>
-    </div>
-    <div class="panel-ops">
-        <p>Today's Deals</p>
-        <p>Customer service</p>
-        <p>Gift Cards</p>
-        <p>Sell</p>
-        </div>
-        <div class="panel-deals">
-            Shop deals in Electronics
-        </div>
-        </div>
+         <a href="#">See more</a>
+
+         <div class="card" style="justify-content: flex-start;">
+            <h2>Sign in for your best experience</h2>
+            <button style="background-color: yellow; border:1px solid red;border-radius: 8px;padding:10px; cursor:pointer;">Sign in Securely</button>
+         </div>
+    </main>
         </header>
         <div class ="hero-section">
             <div class="hero-msg">
@@ -191,3 +246,4 @@
         </header>
 </body>
 </html>
+
